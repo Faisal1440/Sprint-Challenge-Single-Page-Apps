@@ -14,13 +14,13 @@ export default function SearchForm(props) {
   const [test, setTest] = useState ("");
 
   const handleChanges = e => {
-    props.space(e.target.value);
+    props.look(e.target.value);
     setTest(e.target.value);
   }
 
   const submission = e => {
     e.preventDefault();
-    props.space(test);
+    props.look(test);
   }
 
 
@@ -31,7 +31,8 @@ export default function SearchForm(props) {
         <input 
           id="name"
           type="text"
-          placeholder={handleChanges}
+          placeholder="Search"
+          onChange={handleChanges}
           name="find"
           />
         <Design type="submit">Search Here</Design>

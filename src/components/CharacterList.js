@@ -64,11 +64,11 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
-      <SearchForm space = { onFinder}/>
+      <SearchForm look = { onFinder}/>
       <Link to= "/">Home</Link> 
       <Designer>
         {searchcharacter.map(character =>
-        
+
           <CharacterCard 
           key={character.id}
           Name={character}
